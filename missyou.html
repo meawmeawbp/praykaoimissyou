@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คิดถึงนะ ปลายข้าว & ไชโล 🤍</title>
+    <!-- Google Fonts: Mali -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Mali', cursive, sans-serif;
+        }
+
+        body {
+            background-color: #fff8f6;
+            color: #5c524b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 90%;
+            max-width: 380px;
+            padding: 30px 22px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(235, 185, 175, 0.2);
+            text-align: center;
+            border: 2px dashed #ffb3b3;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .step {
+            display: none;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #d97d7d;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #8c7b73;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: #ffb3b3;
+            color: #fff;
+            border: none;
+            padding: 10px 24px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(255, 179, 179, 0.4);
+        }
+
+        .btn:hover {
+            background-color: #ff9999;
+            transform: scale(1.03);
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .heart-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: inline-block;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* Image styling as requested */
+        .card-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 220px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Step 1 -->
+        <div class="step active" id="step1">
+            <div class="heart-icon">👀</div>
+            <h1>จ๊ะเอ๊ไชโลลลลลล</h1>
+            <p>กดเพื่อพบเจอสิ่งมหัศจรรย์</p>
+            <button class="btn" onclick="nextStep(2)">กดตรงนี้ตะเอง</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step" id="step2">
+            <div class="heart-icon">💭</div>
+            <h1>ไชโลทำไงดี ปลายข้าวไม่สบาย</h1>
+            <p>เป็นห่วงนะเนี่ย งานเอ๋ยจงเสร็จจงเสร็จจงเสร็จ ปลายข้าวจะได้พักผ่อนไวๆ</p>
+            <button class="btn" onclick="nextStep(3)">กดกดกดกดกด</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step" id="step3">
+            <div class="heart-icon">🤍</div>
+            <h1>หายไวๆนะจ้วน รีบกลับมาเค้าจะดูแลให้เธอหายไข้เอง</h1>
+            <p>คิดถึงไม่มากแต่คิดถึงตลอด คิดถึงไชโลอยากเจอไชโลบ้าง</p>
+            <button class="btn" onclick="nextStep(4)">กดเพื่อกอดไชโล</button>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step" id="step4">
+            <img src="chailo-1.png" alt="เจ้าไชโล" class="card-img" onerror="this.src='https://placehold.co/300x200/ffb3b3/fff?text=Chailo'">
+            <h1>ไชโลมารายงานตัว! ทะด้าาา 🐶</h1>
+            <p>ตะเอ๋ ไชโลตัวจีงอยู่ข้างๆปลายข้าวอ่ะป่าวววว</p>
+            <button class="btn" onclick="nextStep(5)">เค้าอยากกอดทั้งสองตัวเอ้ยยย</button>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step" id="step5">
+            <img src="praykao.png" alt="ปลายข้าวและไชโล" class="card-img" onerror="this.src='https://placehold.co/300x200/ffb3b3/fff?text=Praykao+%26+Chailo'">            <h1>คิดถึงทั้งสองคนเลยนะ 🥺</h1>
+            <p>เค้าคิดถึงทั้งปลายข้าวทั้งไชโลเลย ฝากไชโลดูแลปลายข้าวที ขอให้ปลายข้าวหายไวๆ พักผ่อนเต็มที่ นอนกอดไชโลเย้อๆ</p>
+            <button class="btn" onclick="nextStep(6)">กดเพื่อรับพร สาธุ99</button>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step" id="step6">
+            <img src="chailo-2.png" alt="ไชโลส่งกำลังใจ" class="card-img" onerror="this.src='https://placehold.co/300x200/ffb3b3/fff?text=Chailo+Heart'">
+            <h1>หายป่วยเพี้ยงๆๆๆ เติมพลังเติมข้าวหลายๆหม้อหลายๆจาน</h1>
+            <p>เค้าคิดถึ๊งคิดถึงอยากเติมปลายข้าวบ้างง่ะ มากอดทีนุงไชโล</p>
+            <button class="btn" onclick="nextStep(1)">วนดูเพื่อโดนบอกคิดถึงอีกรอบ</button>
+        </div>
+    </div>
+
+    <script>
+        function nextStep(stepNumber) {
+            // Hide all steps
+            const steps = document.querySelectorAll('.step');
+            steps.forEach(step => step.classList.remove('active'));
+
+            // Show target step
+            const targetStep = document.getElementById(`step${stepNumber}`);
+            if (targetStep) {
+                targetStep.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
